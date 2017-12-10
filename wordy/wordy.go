@@ -1,6 +1,7 @@
 package wordy
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -34,20 +35,7 @@ func Answer(s string) (int, bool) {
 	}
 	for i := 0; i < len(perform); i++ {
 
-		switch perform[i] {
-
-		case "+":
-			result += numbers[i] + numbers[i+1]
-		case "-":
-			result += numbers[i] - numbers[i+1]
-		case "*":
-			result += numbers[i] * numbers[i+1]
-		case "/":
-			result += numbers[i] / numbers[i+1]
-		case "e":
-			result += numbers[i] * numbers[i+1]
-		}
-
 	}
+	fmt.Println(result)
 	return result, true
 }
